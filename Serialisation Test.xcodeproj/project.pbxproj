@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B823AC4173C3863005C0AAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B823AC3173C3863005C0AAC /* Cocoa.framework */; };
+		5B823ACE173C3863005C0AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B823ACC173C3863005C0AAC /* InfoPlist.strings */; };
+		5B823AD0173C3863005C0AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B823ACF173C3863005C0AAC /* main.m */; };
+		5B823AD4173C3863005C0AAC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5B823AD2173C3863005C0AAC /* Credits.rtf */; };
+		5B823AD7173C3863005C0AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B823AD6173C3863005C0AAC /* AppDelegate.m */; };
+		5B823ADA173C3863005C0AAC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B823AD8173C3863005C0AAC /* MainMenu.xib */; };
+		5B823AE2173C3863005C0AAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B823AE1173C3863005C0AAC /* SenTestingKit.framework */; };
+		5B823AE3173C3863005C0AAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B823AC3173C3863005C0AAC /* Cocoa.framework */; };
+		5B823AEB173C3863005C0AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B823AE9173C3863005C0AAC /* InfoPlist.strings */; };
+		5B823AEE173C3863005C0AAC /* Serialisation_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B823AED173C3863005C0AAC /* Serialisation_TestTests.m */; };
+		5B823AF9173C387F005C0AAC /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B823AF8173C387F005C0AAC /* Model.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B823AE4173C3863005C0AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B823AB8173C3863005C0AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B823ABF173C3863005C0AAC;
+			remoteInfo = "Serialisation Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B823AC0173C3863005C0AAC /* Serialisation Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Serialisation Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B823AC3173C3863005C0AAC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5B823AC6173C3863005C0AAC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5B823AC7173C3863005C0AAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5B823AC8173C3863005C0AAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B823ACB173C3863005C0AAC /* Serialisation Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Serialisation Test-Info.plist"; sourceTree = "<group>"; };
+		5B823ACD173C3863005C0AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B823ACF173C3863005C0AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B823AD1173C3863005C0AAC /* Serialisation Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Serialisation Test-Prefix.pch"; sourceTree = "<group>"; };
+		5B823AD3173C3863005C0AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5B823AD5173C3863005C0AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B823AD6173C3863005C0AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B823AD9173C3863005C0AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5B823AE0173C3863005C0AAC /* Serialisation TestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serialisation TestTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B823AE1173C3863005C0AAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5B823AE8173C3863005C0AAC /* Serialisation TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Serialisation TestTests-Info.plist"; sourceTree = "<group>"; };
+		5B823AEA173C3863005C0AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B823AEC173C3863005C0AAC /* Serialisation_TestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serialisation_TestTests.h; sourceTree = "<group>"; };
+		5B823AED173C3863005C0AAC /* Serialisation_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Serialisation_TestTests.m; sourceTree = "<group>"; };
+		5B823AF7173C387F005C0AAC /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		5B823AF8173C387F005C0AAC /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B823ABD173C3863005C0AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823AC4173C3863005C0AAC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B823ADC173C3863005C0AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823AE2173C3863005C0AAC /* SenTestingKit.framework in Frameworks */,
+				5B823AE3173C3863005C0AAC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B823AB7173C3863005C0AAC = {
+			isa = PBXGroup;
+			children = (
+				5B823AC9173C3863005C0AAC /* Serialisation Test */,
+				5B823AE6173C3863005C0AAC /* Serialisation TestTests */,
+				5B823AC2173C3863005C0AAC /* Frameworks */,
+				5B823AC1173C3863005C0AAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B823AC1173C3863005C0AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AC0173C3863005C0AAC /* Serialisation Test.app */,
+				5B823AE0173C3863005C0AAC /* Serialisation TestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B823AC2173C3863005C0AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AC3173C3863005C0AAC /* Cocoa.framework */,
+				5B823AE1173C3863005C0AAC /* SenTestingKit.framework */,
+				5B823AC5173C3863005C0AAC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B823AC5173C3863005C0AAC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AC6173C3863005C0AAC /* AppKit.framework */,
+				5B823AC7173C3863005C0AAC /* CoreData.framework */,
+				5B823AC8173C3863005C0AAC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5B823AC9173C3863005C0AAC /* Serialisation Test */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AD5173C3863005C0AAC /* AppDelegate.h */,
+				5B823AD6173C3863005C0AAC /* AppDelegate.m */,
+				5B823AD8173C3863005C0AAC /* MainMenu.xib */,
+				5B823ACA173C3863005C0AAC /* Supporting Files */,
+				5B823AF7173C387F005C0AAC /* Model.h */,
+				5B823AF8173C387F005C0AAC /* Model.m */,
+			);
+			path = "Serialisation Test";
+			sourceTree = "<group>";
+		};
+		5B823ACA173C3863005C0AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B823ACB173C3863005C0AAC /* Serialisation Test-Info.plist */,
+				5B823ACC173C3863005C0AAC /* InfoPlist.strings */,
+				5B823ACF173C3863005C0AAC /* main.m */,
+				5B823AD1173C3863005C0AAC /* Serialisation Test-Prefix.pch */,
+				5B823AD2173C3863005C0AAC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B823AE6173C3863005C0AAC /* Serialisation TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AEC173C3863005C0AAC /* Serialisation_TestTests.h */,
+				5B823AED173C3863005C0AAC /* Serialisation_TestTests.m */,
+				5B823AE7173C3863005C0AAC /* Supporting Files */,
+			);
+			path = "Serialisation TestTests";
+			sourceTree = "<group>";
+		};
+		5B823AE7173C3863005C0AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B823AE8173C3863005C0AAC /* Serialisation TestTests-Info.plist */,
+				5B823AE9173C3863005C0AAC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B823ABF173C3863005C0AAC /* Serialisation Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B823AF1173C3863005C0AAC /* Build configuration list for PBXNativeTarget "Serialisation Test" */;
+			buildPhases = (
+				5B823ABC173C3863005C0AAC /* Sources */,
+				5B823ABD173C3863005C0AAC /* Frameworks */,
+				5B823ABE173C3863005C0AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serialisation Test";
+			productName = "Serialisation Test";
+			productReference = 5B823AC0173C3863005C0AAC /* Serialisation Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B823ADF173C3863005C0AAC /* Serialisation TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B823AF4173C3863005C0AAC /* Build configuration list for PBXNativeTarget "Serialisation TestTests" */;
+			buildPhases = (
+				5B823ADB173C3863005C0AAC /* Sources */,
+				5B823ADC173C3863005C0AAC /* Frameworks */,
+				5B823ADD173C3863005C0AAC /* Resources */,
+				5B823ADE173C3863005C0AAC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B823AE5173C3863005C0AAC /* PBXTargetDependency */,
+			);
+			name = "Serialisation TestTests";
+			productName = "Serialisation TestTests";
+			productReference = 5B823AE0173C3863005C0AAC /* Serialisation TestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B823AB8173C3863005C0AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Random Sequence";
+			};
+			buildConfigurationList = 5B823ABB173C3863005C0AAC /* Build configuration list for PBXProject "Serialisation Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B823AB7173C3863005C0AAC;
+			productRefGroup = 5B823AC1173C3863005C0AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B823ABF173C3863005C0AAC /* Serialisation Test */,
+				5B823ADF173C3863005C0AAC /* Serialisation TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B823ABE173C3863005C0AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823ACE173C3863005C0AAC /* InfoPlist.strings in Resources */,
+				5B823AD4173C3863005C0AAC /* Credits.rtf in Resources */,
+				5B823ADA173C3863005C0AAC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B823ADD173C3863005C0AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823AEB173C3863005C0AAC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B823ADE173C3863005C0AAC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B823ABC173C3863005C0AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823AD0173C3863005C0AAC /* main.m in Sources */,
+				5B823AD7173C3863005C0AAC /* AppDelegate.m in Sources */,
+				5B823AF9173C387F005C0AAC /* Model.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B823ADB173C3863005C0AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B823AEE173C3863005C0AAC /* Serialisation_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B823AE5173C3863005C0AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B823ABF173C3863005C0AAC /* Serialisation Test */;
+			targetProxy = 5B823AE4173C3863005C0AAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B823ACC173C3863005C0AAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B823ACD173C3863005C0AAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B823AD2173C3863005C0AAC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B823AD3173C3863005C0AAC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5B823AD8173C3863005C0AAC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B823AD9173C3863005C0AAC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		5B823AE9173C3863005C0AAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B823AEA173C3863005C0AAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B823AEF173C3863005C0AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5B823AF0173C3863005C0AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B823AF2173C3863005C0AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Serialisation Test/Serialisation Test-Prefix.pch";
+				INFOPLIST_FILE = "Serialisation Test/Serialisation Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B823AF3173C3863005C0AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Serialisation Test/Serialisation Test-Prefix.pch";
+				INFOPLIST_FILE = "Serialisation Test/Serialisation Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5B823AF5173C3863005C0AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Serialisation Test.app/Contents/MacOS/Serialisation Test";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Serialisation Test/Serialisation Test-Prefix.pch";
+				INFOPLIST_FILE = "Serialisation TestTests/Serialisation TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5B823AF6173C3863005C0AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Serialisation Test.app/Contents/MacOS/Serialisation Test";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Serialisation Test/Serialisation Test-Prefix.pch";
+				INFOPLIST_FILE = "Serialisation TestTests/Serialisation TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B823ABB173C3863005C0AAC /* Build configuration list for PBXProject "Serialisation Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B823AEF173C3863005C0AAC /* Debug */,
+				5B823AF0173C3863005C0AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B823AF1173C3863005C0AAC /* Build configuration list for PBXNativeTarget "Serialisation Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B823AF2173C3863005C0AAC /* Debug */,
+				5B823AF3173C3863005C0AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B823AF4173C3863005C0AAC /* Build configuration list for PBXNativeTarget "Serialisation TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B823AF5173C3863005C0AAC /* Debug */,
+				5B823AF6173C3863005C0AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B823AB8173C3863005C0AAC /* Project object */;
+}
