@@ -18,5 +18,3 @@ Results serialising / deserialising 100,000 model objects on a 1.8GHz i7 MacBook
 	NSJSONSerialization 		3.577512
 	NSKeyedArchiver 			8.480273
 	NSPropertyListSerialization 3.176268
-
-Winner: NSJSONSerialization
