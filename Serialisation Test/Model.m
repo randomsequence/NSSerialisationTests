@@ -8,6 +8,10 @@
 
 #import "Model.h"
 
+NSString * const UUIDKey = @"UUID";
+NSString * const PointKey = @"point";
+NSString * const RectKey = @"rect";
+
 @implementation Model
 
 + (id)model {
@@ -19,35 +23,46 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:self.UUID forKey:@"UUID"];
-    [aCoder encodeObject:NSStringFromPoint(self.point) forKey:@"point"];
-    [aCoder encodeObject:NSStringFromRect(self.rect) forKey:@"rect"];
+    if ([aCoder allowsKeyedCoding]) {
+        [aCoder encodeObject:self.UUID forKey:UUIDKey];
+        [aCoder encodePoint:self.point forKey:PointKey];
+        [aCoder encodeRect:self.rect forKey:RectKey];
+    } else {
+        [aCoder encodeObject:self.UUID];
+        [aCoder encodePoint:self.point];
+        [aCoder encodeRect:self.rect];
+    }
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    
     self = [super init];
     if (self) {
-        self.UUID = [decoder decodeObjectForKey:@"UUID"];
-        self.point = NSPointFromString([decoder decodeObjectForKey:@"point"]);
-        self.rect = NSRectFromString([decoder decodeObjectForKey:@"rect"]);
+        if ([decoder allowsKeyedCoding]) {
+            self.UUID = [decoder decodeObjectForKey:UUIDKey];
+            self.point = [decoder decodePointForKey:PointKey];
+            self.rect = [decoder decodeRectForKey:RectKey];
+        } else {
+            self.UUID = [decoder decodeObject];
+            self.point = [decoder decodePoint];
+            self.rect = [decoder decodeRect];
+        }
     }
     return self;
 }
 
 - (NSDictionary *)dict {
     return @{
-             @"UUID": self.UUID,
-             @"point": NSStringFromPoint(self.point),
-             @"rect": NSStringFromRect(self.rect)
+             UUIDKey: self.UUID,
+             PointKey: NSStringFromPoint(self.point),
+             RectKey: NSStringFromRect(self.rect)
              };
 }
 
 + (id)modelWithDictionary:(NSDictionary *)dictionary {
     Model *model = [Model new];
-    model.UUID = [dictionary objectForKey:@"UUID"];
-    model.point = NSPointFromString([dictionary objectForKey:@"point"]);
-    model.rect = NSRectFromString([dictionary objectForKey:@"rect"]);     
+    model.UUID = [dictionary objectForKey:UUIDKey];
+    model.point = NSPointFromString([dictionary objectForKey:PointKey]);
+    model.rect = NSRectFromString([dictionary objectForKey:RectKey]);     
     return model;
 }
 

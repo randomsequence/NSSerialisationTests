@@ -34,16 +34,33 @@
     NSDate *startDate = [NSDate date];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
     for (Model *model in self.models) {
+        [array addObject:[NSArchiver archivedDataWithRootObject:model]];
+    }
+    NSMutableArray *models1 = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    for (NSData *data in array) {
+        [models1 addObject:[NSUnarchiver unarchiveObjectWithData:data]];
+    }    
+    NSDate *endDate = [NSDate date];
+    
+    NSLog(@"NSArchiver models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
+}
+
+- (void)testNSKeyedCoding
+{
+    NSDate *startDate = [NSDate date];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    for (Model *model in self.models) {
         [array addObject:[NSKeyedArchiver archivedDataWithRootObject:model]];
     }
     NSMutableArray *models1 = [NSMutableArray arrayWithCapacity:ITERATIONS];
     for (NSData *data in array) {
         [models1 addObject:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
-    }    
+    }
     NSDate *endDate = [NSDate date];
     
     NSLog(@"NSKeyedArchiver models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
+
 
 - (void)testPropertyListSerialisation
 {
