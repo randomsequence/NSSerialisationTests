@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3896E2173D0FAF009582C8 /* TIKSyncCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3896E1173D0FAF009582C8 /* TIKSyncCoder.m */; };
 		5B823AC4173C3863005C0AAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B823AC3173C3863005C0AAC /* Cocoa.framework */; };
 		5B823ACE173C3863005C0AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B823ACC173C3863005C0AAC /* InfoPlist.strings */; };
 		5B823AD0173C3863005C0AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B823ACF173C3863005C0AAC /* main.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3896E0173D0FAF009582C8 /* TIKSyncCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIKSyncCoder.h; sourceTree = "<group>"; };
+		5B3896E1173D0FAF009582C8 /* TIKSyncCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIKSyncCoder.m; sourceTree = "<group>"; };
 		5B823AC0173C3863005C0AAC /* Serialisation Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Serialisation Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B823AC3173C3863005C0AAC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5B823AC6173C3863005C0AAC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				5B823ACA173C3863005C0AAC /* Supporting Files */,
 				5B823AF7173C387F005C0AAC /* Model.h */,
 				5B823AF8173C387F005C0AAC /* Model.m */,
+				5B3896E0173D0FAF009582C8 /* TIKSyncCoder.h */,
+				5B3896E1173D0FAF009582C8 /* TIKSyncCoder.m */,
 			);
 			path = "Serialisation Test";
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				5B823AD0173C3863005C0AAC /* main.m in Sources */,
 				5B823AD7173C3863005C0AAC /* AppDelegate.m in Sources */,
 				5B823AF9173C387F005C0AAC /* Model.m in Sources */,
+				5B3896E2173D0FAF009582C8 /* TIKSyncCoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +464,7 @@
 				5B823AF3173C3863005C0AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B823AF4173C3863005C0AAC /* Build configuration list for PBXNativeTarget "Serialisation TestTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +473,7 @@
 				5B823AF6173C3863005C0AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

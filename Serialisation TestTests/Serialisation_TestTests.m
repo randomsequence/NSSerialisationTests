@@ -8,6 +8,7 @@
 
 #import "Serialisation_TestTests.h"
 #import "Model.h"
+#import "TIKSyncCoder.h"
 
 #define ITERATIONS 100000
 
@@ -29,7 +30,7 @@
     self.models = nil;
 }
 
-- (void)testNSCoding
+- (void)test01NSCoding
 {
     NSDate *startDate = [NSDate date];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
@@ -45,7 +46,7 @@
     NSLog(@"NSArchiver models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
 
-- (void)testNSKeyedCoding
+- (void)test01NSKeyedCoding
 {
     NSDate *startDate = [NSDate date];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
@@ -62,7 +63,7 @@
 }
 
 
-- (void)testPropertyListSerialisation
+- (void)test03PropertyListSerialisation
 {
     NSDate *startDate = [NSDate date];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
@@ -83,7 +84,7 @@
     NSLog(@"NSPropertyListSerialization models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
 
-- (void)testJSONSerialisation
+- (void)test04JSONSerialisation
 {
     NSDate *startDate = [NSDate date];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
@@ -97,6 +98,25 @@
     NSDate *endDate = [NSDate date];
     
     NSLog(@"NSJSONSerialization models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
+}
+
+- (void)test05TIKSyncCoderSerialisation
+{
+    NSDate *startDate = [NSDate date];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    for (Model *model in self.models) {
+        [array addObject:[TIKSyncCoder newLogTxnWithType:@"model" andKVPairs:[model dict]]];
+    }
+    NSMutableArray *models1 = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    NSMutableDictionary *scratchDict = [NSMutableDictionary dictionaryWithCapacity:4];
+    for (NSString *txn in array) {
+        [scratchDict removeAllObjects];
+        [TIKSyncCoder parseKVPairsFromString:txn intoDict:scratchDict];
+        [models1 addObject:[scratchDict copy]];
+    }
+    NSDate *endDate = [NSDate date];
+    
+    NSLog(@"TIKSyncCoder models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
 
 @end
