@@ -29,6 +29,19 @@
     self.models = nil;
 }
 
+- (void)testNSCodingAll {
+    NSDate *startDate = [NSDate date];
+    
+    NSArray *models = self.models;
+    
+    NSData *data = [NSArchiver archivedDataWithRootObject:models];
+    
+    NSDate *endDate = [NSDate date];
+    NSLog(@"NSArchiver all: %li duration: %f", (unsigned long)[models count], [endDate timeIntervalSinceDate:startDate]);
+    
+    [data writeToFile:[[NSString stringWithFormat:@"~/Desktop/%@.dat", NSStringFromSelector(_cmd)] stringByExpandingTildeInPath] atomically:NO];
+}
+
 - (void)testNSCoding
 {
     NSDate *startDate = [NSDate date];
@@ -43,6 +56,19 @@
     NSDate *endDate = [NSDate date];
     
     NSLog(@"NSArchiver models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
+}
+
+- (void)testNSKeyedCodingAll {
+    NSDate *startDate = [NSDate date];
+    
+    NSArray *models = self.models;
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:models];
+    
+    NSDate *endDate = [NSDate date];
+    NSLog(@"NSKeyedArchiver all: %li duration: %f", (unsigned long)[models count], [endDate timeIntervalSinceDate:startDate]);
+    
+    [data writeToFile:[[NSString stringWithFormat:@"~/Desktop/%@.dat", NSStringFromSelector(_cmd)] stringByExpandingTildeInPath] atomically:NO];
 }
 
 - (void)testNSKeyedCoding
@@ -83,6 +109,22 @@
     NSLog(@"NSPropertyListSerialization models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
 
+- (void)testPropertyListSerialisationAll {
+    NSDate *startDate = [NSDate date];
+    
+    NSMutableArray *models = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    for (Model *model in self.models) {
+        [models addObject:[model dict]];
+    }
+    
+    NSData *data = [NSPropertyListSerialization dataWithPropertyList:models format:NSPropertyListBinaryFormat_v1_0 options:0 error:nil];
+    
+    NSDate *endDate = [NSDate date];
+    NSLog(@"NSPropertyListSerialization all: %li duration: %f", (unsigned long)[models count], [endDate timeIntervalSinceDate:startDate]);
+    
+    [data writeToFile:[[NSString stringWithFormat:@"~/Desktop/%@.dat", NSStringFromSelector(_cmd)] stringByExpandingTildeInPath] atomically:NO];
+}
+
 - (void)testJSONSerialisation
 {
     NSDate *startDate = [NSDate date];
@@ -99,4 +141,19 @@
     NSLog(@"NSJSONSerialization models: %li duration: %f", (unsigned long)[models1 count], [endDate timeIntervalSinceDate:startDate]);
 }
 
+- (void)testJSONSerialisationAll {
+    NSDate *startDate = [NSDate date];
+    
+    NSMutableArray *models = [NSMutableArray arrayWithCapacity:ITERATIONS];
+    for (Model *model in self.models) {
+        [models addObject:[model dict]];
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:models options:0 error:nil];
+    
+    NSDate *endDate = [NSDate date];
+    NSLog(@"NSJSONSerialization all: %li duration: %f", (unsigned long)[models count], [endDate timeIntervalSinceDate:startDate]);
+    
+    [data writeToFile:[[NSString stringWithFormat:@"~/Desktop/%@.dat", NSStringFromSelector(_cmd)] stringByExpandingTildeInPath] atomically:NO];
+}
 @end
